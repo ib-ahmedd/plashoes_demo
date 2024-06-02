@@ -10,7 +10,7 @@ const CartContentMobile = () => {
     cartProducts &&
     cartProducts.map((item) => (
       <CartTableMobile
-        key={item.id}
+        key={item.cartItemId}
         {...item}
         handleQuantity={handleQuantity}
         handleDelete={handleDelete}

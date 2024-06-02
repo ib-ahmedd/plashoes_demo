@@ -63,18 +63,48 @@ const NavBar = () => {
               path={isLoggedIn ? "/profile/account" : "/login"}
               state={"/profile/account"}
               onlyTab={true}
+              setMenuOpen={setMenuOpen}
             />
-            <LinkButton text={"MEN"} path={"/shop-men"} />
-            <LinkButton text={"WOMEN"} path={"/shop-women"} />
-            <LinkButton text={"COLLECTION"} path={"/collection"} />
-            <LinkButton text={"LOOKBOOK"} path={"/lookbook"} />
-            <LinkButton text={"SALE"} path={"/sale"} />
+            <LinkButton
+              text={"MEN"}
+              path={"/shop-men"}
+              setMenuOpen={setMenuOpen}
+            />
+            <LinkButton
+              text={"WOMEN"}
+              path={"/shop-women"}
+              setMenuOpen={setMenuOpen}
+            />
+            <LinkButton
+              text={"COLLECTION"}
+              path={"/collection"}
+              setMenuOpen={setMenuOpen}
+            />
+            <LinkButton
+              text={"LOOKBOOK"}
+              path={"/lookbook"}
+              setMenuOpen={setMenuOpen}
+            />
+            <LinkButton
+              text={"SALE"}
+              path={"/sale"}
+              setMenuOpen={setMenuOpen}
+            />
           </section>
           <section className="navbar-right">
-            <LinkButton text={"OUR STORY"} path={"/our-story"} />
-            <LinkButton text={"CONTACT"} path={"/contact"} />
+            <LinkButton
+              text={"OUR STORY"}
+              path={"/our-story"}
+              setMenuOpen={setMenuOpen}
+            />
+            <LinkButton
+              text={"CONTACT"}
+              path={"/contact"}
+              setMenuOpen={setMenuOpen}
+            />
             <span className="profile-icon">
               <LinkButton
+                setMenuOpen={setMenuOpen}
                 text={<FontAwesomeIcon icon={faUser} />}
                 path={isLoggedIn ? "/profile/account" : "/login"}
                 state={"/profile/account"}

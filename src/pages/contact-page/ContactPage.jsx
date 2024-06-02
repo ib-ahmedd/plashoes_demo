@@ -8,10 +8,9 @@ import "../../assets/styles/contact-page/contact-mobile-style.css";
 import ContactFAQs from "./components/ContactFAQs";
 import { useContext, useState } from "react";
 import { AppContext } from "../../App";
-import axios from "axios";
 import MessageSent from "./components/MessageSent";
 const ContactPage = () => {
-  const { isLoggedIn, user } = useContext(AppContext);
+  const { user } = useContext(AppContext);
 
   const [inputs, setInputs] = useState({
     contactName: user.user_name ? user.user_name : "",
@@ -29,21 +28,7 @@ const ContactPage = () => {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    try {
-      const response = await axios.post(
-        "http://localhost:5000/api/contact-message",
-        {
-          contactName: isLoggedIn ? user.user_name : inputs.contactName,
-          contactEmail: isLoggedIn ? user.email : inputs.contactEmail,
-          contactMessage: inputs.message,
-        }
-      );
-      if (response.status && response.status === 200) {
-        setSuccess(true);
-      }
-    } catch (err) {
-      console.log(err);
-    }
+    setSuccess(true);
   }
 
   return (

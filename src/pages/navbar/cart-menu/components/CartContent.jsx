@@ -6,12 +6,11 @@ import { AppContext } from "../../../../App";
 const CartContent = () => {
   const { handleDelete, handleQuantity } = useContext(CartIconContext);
   const { cartProducts } = useContext(AppContext);
-
   const cartContent =
     cartProducts &&
     cartProducts.map((item) => (
       <CartItem
-        key={item.id}
+        key={item.cartItemId}
         {...item}
         handleDelete={handleDelete}
         handleQuantity={handleQuantity}

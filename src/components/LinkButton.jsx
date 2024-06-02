@@ -1,8 +1,17 @@
 import { useContext, useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { AppContext } from "../App";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
-const LinkButton = ({ text, path, state, onlyTab, onlyDesktop }) => {
+const LinkButton = ({
+  text,
+  path,
+  state,
+  onlyTab,
+  onlyDesktop,
+  setMenuOpen,
+}) => {
   const { handleMouseDown } = useContext(AppContext);
   const { pathname } = useLocation();
   const [isActive, setIsActive] = useState(false);
@@ -29,10 +38,22 @@ const LinkButton = ({ text, path, state, onlyTab, onlyDesktop }) => {
   return (
     <NavLink
       to={path}
-      style={{
-        color: isActive && "#222",
-        backgroundColor: clicked && "var(--clicked-grey)",
+      onClick={() => {
+        setMenuOpen(false);
       }}
+      style={
+        text === "PROFILE"
+          ? {
+              backgroundColor: isActive ? "var(--green-hover)" : "var(--green)",
+              marginBottom: "2em",
+              color: "white",
+            }
+          : {
+              color: isActive && "#222",
+              backgroundColor: clicked && "var(--clicked-grey)",
+              boxShadow: isActive && "none",
+            }
+      }
       className={
         isActive
           ? `${specificClass} active-link-btn link-buttons`
@@ -43,6 +64,16 @@ const LinkButton = ({ text, path, state, onlyTab, onlyDesktop }) => {
         handleMouseDown(setClicked);
       }}
     >
+      {text === "PROFILE" && (
+        <span
+          style={{
+            fontSize: "1.5em",
+            marginRight: "0.5em",
+          }}
+        >
+          <FontAwesomeIcon icon={faUser} />
+        </span>
+      )}
       {text}
     </NavLink>
   );

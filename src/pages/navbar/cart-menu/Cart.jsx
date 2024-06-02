@@ -27,8 +27,6 @@ const Cart = ({ toggleCart }) => {
     });
   }
 
-  console.log(cartProducts);
-
   function handleDelete(id) {
     if (isLoggedIn) {
       const updatedItems = cartProducts.filter(

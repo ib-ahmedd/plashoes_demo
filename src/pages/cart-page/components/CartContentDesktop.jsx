@@ -10,7 +10,7 @@ const CartContentDesktop = () => {
     cartProducts &&
     cartProducts.map((item) => (
       <CartTableData
-        key={item.id}
+        key={item.cartItemId}
         {...item}
         handleQuantity={handleQuantity}
         handleDelete={handleDelete}
