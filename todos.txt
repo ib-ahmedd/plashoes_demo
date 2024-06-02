@@ -1,0 +1,7 @@
+get all products on load
+check lenth of products
+if products > 12, set displayed products to index 0 to 11 and display pages buttons
+page 2 displays products from index 12 to length of products - 1
+
+sort options sort products according to defined sort arrays
+if 

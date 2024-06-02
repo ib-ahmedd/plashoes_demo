@@ -1,0 +1,42 @@
+@media (min-width: 0px) and (max-width: 850px) {
+  .our-story-page {
+    padding: 1em 0;
+  }
+
+  .our-story-page h1 {
+    font-size: 2em;
+  }
+
+  .story-heading {
+    padding: 0 5%;
+    box-sizing: border-box;
+  }
+
+  .story-heading p {
+    font-size: 1.2em;
+  }
+  .short-notes {
+    padding: 2em;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  .short-notes h3 {
+    font-size: 1.2em;
+  }
+
+  .short-notes p {
+    font-size: 0.9em;
+  }
+
+  .mission,
+  .vision {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .mission p,
+  .vision p {
+    font-size: 0.9em;
+  }
+}

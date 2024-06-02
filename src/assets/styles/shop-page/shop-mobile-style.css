@@ -1,0 +1,43 @@
+@media (min-width: 0px) and (max-width: 850px) {
+  .shop-page h1 {
+    font-size: 3em;
+    margin: 0;
+  }
+
+  .shop-items-section {
+    padding: 0 3%;
+  }
+  .filter-sort {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .filter-sort span {
+    width: 100%;
+  }
+  .shop-filter-btn {
+    width: 15em;
+    font-size: 0.8em;
+  }
+
+  .filter-sort p {
+    font-size: 0.9em;
+    flex-shrink: 1;
+  }
+  .filter-sort select {
+    height: 3em;
+    font-size: 0.9em;
+    width: 50%;
+  }
+
+  .filter-menu {
+    width: 80%;
+  }
+
+  .shop-page .no-result p {
+    font-size: 1.1em;
+  }
+
+  .shop-page .no-result a {
+    font-size: 0.9em;
+  }
+}
