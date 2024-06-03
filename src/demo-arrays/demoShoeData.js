@@ -212,7 +212,7 @@ const demoShoeData = [
   {
     id: 16,
     shoename: "Women’s Cream Suede",
-    image: "./images/demo-shoes-images/women/women cream Suede.jpg",
+    image: "./images/demo-shoes-images/women/women cream suede.jpg",
     price: 78.8,
     free_shipping: true,
     categories: "Suede",
@@ -226,7 +226,7 @@ const demoShoeData = [
   {
     id: 17,
     shoename: "Women’s Pink Suede",
-    image: "./images/demo-shoes-images/women/women pink Suede.jpg",
+    image: "./images/demo-shoes-images/women/women pink suede.jpg",
     price: 78.8,
     free_shipping: false,
     categories: "Suede",
