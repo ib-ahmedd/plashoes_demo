@@ -1,11 +1,20 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import Quantity from "./Quantity";
 import { ProductPageContext } from "../ProductPage";
 import Price from "../../../components/Price";
+import { AppContext } from "../../../App";
 
 const FixedQuantity = ({ fixedQuantityOpen }) => {
+  const { setpushScrollTop } = useContext(AppContext);
   const { product } = useContext(ProductPageContext);
   const { image, shoename, price, sale } = product;
+  useEffect(() => {
+    if (fixedQuantityOpen) {
+      setpushScrollTop(true);
+    } else {
+      setpushScrollTop(false);
+    }
+  }, [fixedQuantityOpen, setpushScrollTop]);
   return (
     <div
       className="fixed-quantity"

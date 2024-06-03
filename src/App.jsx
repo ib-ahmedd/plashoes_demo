@@ -62,6 +62,7 @@ function App() {
   const [payedOrders, setPayedOrders] = useState([]);
   const [noNav, setNoNav] = useState(false);
   const [loginState, setLoginState] = useState("");
+  const [pushScrollTop, setpushScrollTop] = useState(false);
   const navigate = useNavigate();
 
   function logUserIn(data, path) {
@@ -208,8 +209,6 @@ function App() {
     }
   }, []);
 
-  // deleteCookie(`user${user.id}orders`);
-
   const AppContextValue = {
     registerUser,
     logUserIn,
@@ -244,6 +243,8 @@ function App() {
     loginState,
     setLoginState,
     getDate,
+    pushScrollTop,
+    setpushScrollTop,
   };
 
   return (

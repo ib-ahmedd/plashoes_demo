@@ -117,7 +117,7 @@ const SignupPage = () => {
     phone: checkPhone(),
     DOB: checkDate(),
   };
-  async function handleSubmit(e) {
+  function handleSubmit(e) {
     e.preventDefault();
     setSubmitted(true);
     const formComplete = checkFormComplete();
@@ -152,11 +152,17 @@ const SignupPage = () => {
               );
               itemsPosted = itemsPosted + 1;
               if (itemsPosted === cartProducts.length) {
-                logUserIn({ userInfo: newUser }, path);
+                setLoading(true);
+                setTimeout(() => {
+                  logUserIn({ userInfo: newUser }, path);
+                }, 1500);
               }
             });
           } else {
-            logUserIn({ userInfo: newUser }, path);
+            setLoading(true);
+            setTimeout(() => {
+              logUserIn({ userInfo: newUser }, path);
+            }, 1500);
           }
         }
       }

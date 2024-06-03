@@ -49,15 +49,12 @@ const Review = () => {
     const userOrdersArray = userOrdersCookie
       ? JSON.parse(userOrdersCookie)
       : [];
-
-    console.log(userOrdersArray);
     const updatedItems = userOrdersArray.map((item) => {
       if (item.productId === parseInt(id)) {
         item.reviewed = true;
       }
       return item;
     });
-    console.log(updatedItems);
     setCookie(`user${user.id}orders`, JSON.stringify(updatedItems), 1);
     setDisabledBtn(true);
     setSuccess(true);

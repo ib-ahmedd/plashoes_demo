@@ -1,9 +1,11 @@
 import { faAnglesUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { AppContext } from "../App";
 
 const ScrollTopBtn = ({ inView }) => {
+  const { pushScrollTop } = useContext(AppContext);
   const [hidden, setHidden] = useState(false);
   const { pathname } = useLocation();
   useEffect(() => {
@@ -20,7 +22,8 @@ const ScrollTopBtn = ({ inView }) => {
       }}
       className="scroll-top-btn"
       style={{
-        transform: !inView && "translateY(0)",
+        transform:
+          !inView && (pushScrollTop ? "translateY(-4em)" : "translateY(0)"),
         display: hidden && "none",
       }}
     >

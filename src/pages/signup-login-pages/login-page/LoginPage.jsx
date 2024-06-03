@@ -36,9 +36,8 @@ const LoginPage = () => {
     setError(false);
   }
 
-  async function handleSubmit(e) {
-    setLoading(true);
-    e.preventDefault();
+  function handleSubmit() {
+    // e.preventDefault();
     let itemsPosted = 0;
     const usersCookie = getCookie("users");
     const usersArray = usersCookie ? JSON.parse(usersCookie) : [];
@@ -71,6 +70,7 @@ const LoginPage = () => {
       setInputStyle(errorStyle);
       setError(true);
     }
+
     setLoading(false);
   }
 
@@ -80,7 +80,16 @@ const LoginPage = () => {
 
   return (
     <main className="login-page">
-      <form className="login-modal" onSubmit={handleSubmit}>
+      <form
+        className="login-modal"
+        onSubmit={(e) => {
+          e.preventDefault();
+          setLoading(true);
+          setTimeout(() => {
+            handleSubmit();
+          }, 1500);
+        }}
+      >
         <input
           type="email"
           placeholder="Email"

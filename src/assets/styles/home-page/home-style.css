@@ -899,7 +899,7 @@ button {
   justify-content: center;
   position: absolute;
   top: -8px;
-  right: -8px;
+  right: 0;
   background-color: #6e7051;
   color: white;
   width: 10px;

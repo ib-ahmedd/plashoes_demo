@@ -13,7 +13,7 @@ const contactInfoArray = [
       </span>
     ),
     heading: "Products & order",
-    content: "(+1) 123-456-7890 available 24/7",
+    content: "(+234) 8034567890 available 24/7",
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const contactInfoArray = [
       </span>
     ),
     heading: "Info & enquiries",
-    content: "(+1) 123-456-7890 available 24/7",
+    content: "(+234) 8034567890 available 24/7",
   },
   {
     id: 3,

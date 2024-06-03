@@ -1,7 +1,7 @@
 @media (min-width: 0px) and (max-width: 850px) {
   .profile-sidebar {
     position: fixed;
-    width: 100%;
+    width: 70%;
     top: 0;
     left: 0;
     transform: translateX(-110%);
@@ -22,7 +22,7 @@
   }
 
   .profile-info h1 {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
 
   .dropDown-heading button {
@@ -338,6 +338,10 @@
     align-items: center;
   }
 
+  .rating-sect .rating-stars .rating-button {
+    font-size: 1.7em;
+  }
+
   .rating-sect .image {
     width: 100%;
     height: fit-content;
@@ -345,6 +349,10 @@
 
   .rating-sect .image img {
     width: 100%;
+  }
+
+  .rating-sect span {
+    height: fit-content;
   }
 
   .review-form .title-name input {
@@ -368,6 +376,10 @@
 
   .recently-viewed .recent-product-modal {
     width: 48%;
+  }
+
+  .recent-product-modal a {
+    font-size: 0.9em;
   }
 
   .recently-viewed {

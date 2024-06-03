@@ -8,6 +8,7 @@ import "../../assets/styles/profile/profile-mobile-style.css";
 import { useContext, useEffect, useState } from "react";
 import { AppContext } from "../../App";
 import { useLocation, useNavigate } from "react-router-dom";
+import ScreenCover from "../../components/ScreenCover";
 
 const ProfilePage = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,7 +17,7 @@ const ProfilePage = () => {
   const { pathname } = useLocation();
   useEffect(() => {
     if (appLoaded && !isLoggedIn) {
-      navigate("/login", { state: "/profile/account" });
+      navigate("/login", { state: "/profile" });
     }
   }, [appLoaded, isLoggedIn, navigate]);
 
@@ -27,6 +28,13 @@ const ProfilePage = () => {
     <main className="profile-page">
       <ProfileSideBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <ProfileInfo setMenuOpen={setMenuOpen} />
+      {menuOpen && (
+        <ScreenCover
+          toggleMenu={() => {
+            setMenuOpen(false);
+          }}
+        />
+      )}
     </main>
   );
 };

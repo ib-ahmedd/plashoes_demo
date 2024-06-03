@@ -39,14 +39,14 @@ const LinkButton = ({
     <NavLink
       to={path}
       onClick={() => {
-        setMenuOpen(false);
+        setMenuOpen && setMenuOpen(false);
       }}
       style={
         text === "PROFILE"
           ? {
-              backgroundColor: isActive ? "var(--green-hover)" : "var(--green)",
+              border: "1px solid",
               marginBottom: "2em",
-              color: "white",
+              color: "var(--green)",
             }
           : {
               color: isActive && "#222",

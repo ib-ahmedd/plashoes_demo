@@ -42,6 +42,7 @@
   .product-details .price-cont .price {
     font-size: 1.2em;
   }
+
   .product-details .short-desc {
     font-size: 0.8em;
   }
@@ -79,6 +80,10 @@
   .desc-review p {
     font-size: 0.8em;
     margin: 0;
+  }
+
+  .product-review .review-sf {
+    font-size: 1em;
   }
 
   .desc-review .product-review .comment {
