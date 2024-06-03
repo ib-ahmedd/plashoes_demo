@@ -21,7 +21,7 @@ const AddressDetails = () => {
           must={true}
         />
       </span>
-      <LabeledInput type={"tel"} name={"address"} label={"Shipping Address"} />
+      <LabeledInput type={"text"} name={"address"} label={"Shipping Address"} />
     </div>
   );
 };
