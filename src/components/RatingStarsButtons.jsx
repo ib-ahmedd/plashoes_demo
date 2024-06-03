@@ -31,7 +31,7 @@ const RatingStarsButtons = ({
   }
 
   const starButtons = starsArray.map((item) => (
-    <span
+    <div
       onClick={() => {
         handleStars(item.id);
       }}
@@ -45,7 +45,7 @@ const RatingStarsButtons = ({
       className="rating-button"
     >
       {item.element}
-    </span>
+    </div>
   ));
   return <div className="rating-stars">{starButtons}</div>;
 };

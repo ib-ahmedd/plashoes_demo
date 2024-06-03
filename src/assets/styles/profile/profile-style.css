@@ -884,7 +884,12 @@
   color: var(--green);
 }
 
-.rating-sect .rating-stars button {
+.rating-sect .rating-stars {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating-sect .rating-stars .rating-button {
   font-size: 2em;
 }
 
