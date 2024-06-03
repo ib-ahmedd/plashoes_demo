@@ -54,4 +54,10 @@
   .shop-page .no-result a {
     font-size: 0.9em;
   }
+
+  .result-pages-button {
+    font-size: 1.2em;
+    width: 2em;
+    height: 2em;
+  }
 }

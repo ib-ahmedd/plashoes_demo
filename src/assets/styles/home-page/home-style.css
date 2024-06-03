@@ -500,6 +500,9 @@ button {
 .search-bar button {
   background-color: var(--green);
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 13%;
   color: white;
   box-sizing: border-box;
