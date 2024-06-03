@@ -17,6 +17,7 @@ const ContactPage = () => {
     contactEmail: user.user_name ? user.user_name : "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
 
   function handleInputs(e) {
@@ -28,7 +29,11 @@ const ContactPage = () => {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    setSuccess(true);
+    setLoading(true);
+    setTimeout(() => {
+      setSuccess(true);
+      setLoading(false);
+    }, 1500);
   }
 
   return (
@@ -41,6 +46,7 @@ const ContactPage = () => {
         ) : (
           <ContactForm
             inputs={inputs}
+            loading={loading}
             handleInputs={handleInputs}
             handleSubmit={handleSubmit}
           />

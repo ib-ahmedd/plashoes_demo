@@ -3,7 +3,7 @@ import { AppContext } from "../../../App";
 import NotLoggedInputs from "./NotLoggedInputs";
 import LoggedInputs from "./LoggedInputs";
 
-const ContactForm = ({ inputs, handleInputs, handleSubmit }) => {
+const ContactForm = ({ inputs, handleInputs, handleSubmit, loading }) => {
   const { isLoggedIn } = useContext(AppContext);
   return (
     <form className="contact-form-inputs" onSubmit={handleSubmit}>
@@ -22,7 +22,13 @@ const ContactForm = ({ inputs, handleInputs, handleSubmit }) => {
         required
       />
 
-      <button>SEND MESSAGE</button>
+      {loading ? (
+        <button style={{ backgroundColor: "var(--grey)" }} disabled>
+          Sending...
+        </button>
+      ) : (
+        <button>SEND MESSAGE</button>
+      )}
     </form>
   );
 };

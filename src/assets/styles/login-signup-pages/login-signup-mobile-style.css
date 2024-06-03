@@ -116,7 +116,7 @@
   /* sign up */
 
   .signup-modal {
-    padding: 3em 3%;
+    padding: 1em 3%;
   }
   .signup-modal h1 {
     font-size: 2em;
@@ -124,6 +124,10 @@
 
   .signup-modal h2 {
     font-size: 1.2em;
+  }
+
+  .signup-page h3 {
+    font-size: 0.9em;
   }
 
   .signup-modal label {

@@ -10,7 +10,7 @@ const LoggedInputs = () => {
         type="text"
         name="contactName"
         id="contactName"
-        value={user.user_name}
+        value={`${user.fname} ${user.lname}`}
         disabled
         required
       />
