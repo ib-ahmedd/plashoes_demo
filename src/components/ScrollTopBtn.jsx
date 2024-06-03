@@ -23,7 +23,7 @@ const ScrollTopBtn = ({ inView }) => {
       className="scroll-top-btn"
       style={{
         transform:
-          !inView && (pushScrollTop ? "translateY(-4em)" : "translateY(0)"),
+          !inView && (pushScrollTop ? "translateY(-5em)" : "translateY(0)"),
         display: hidden && "none",
       }}
     >
