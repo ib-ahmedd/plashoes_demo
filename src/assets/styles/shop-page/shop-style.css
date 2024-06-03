@@ -198,6 +198,9 @@
   font-weight: lighter;
   width: 2.5em;
   height: 2.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
 }
 
