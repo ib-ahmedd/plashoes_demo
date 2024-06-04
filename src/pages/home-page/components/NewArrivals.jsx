@@ -5,7 +5,7 @@ const NewArrivals = () => {
   const products = [];
   sortOptionsArrays.latest.forEach((number) => {
     const foundProduct = demoShoeData.find((item) => item.id === number);
-    if (foundProduct && sortOptionsArrays.latest.indexOf(number) < 9)
+    if (foundProduct && sortOptionsArrays.latest.indexOf(number) < 6)
       return products.push(foundProduct);
   });
 
