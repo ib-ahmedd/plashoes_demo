@@ -20,7 +20,7 @@
     width: 40%;
     height: 100vh;
     left: 0;
-    top: 0;
+    bottom: 0;
     position: fixed;
     justify-content: space-around;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);

@@ -198,7 +198,7 @@ button {
 }
 .cart {
   position: fixed;
-  top: 0;
+  bottom: 0;
   right: 0;
   display: flex;
   flex-direction: column;
@@ -1068,6 +1068,7 @@ button {
 
 .home-recycle-logo-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
 }

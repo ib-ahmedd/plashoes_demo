@@ -13,7 +13,7 @@
   }
 
   .navbar-center {
-    width: 60%;
+    width: 70%;
   }
 
   .navbar-center a {
@@ -113,7 +113,10 @@
   /*site intro */
 
   .site-intro {
-    padding: 5em 2em;
+    width: 100%;
+    padding: 4em 1em;
+    box-sizing: border-box;
+    text-align: center;
   }
   .site-intro-right {
     width: 100%;
@@ -124,12 +127,12 @@
 
   .intro-link-buttons-container {
     width: 100%;
-    flex-direction: column;
+    flex-direction: row;
     gap: 2em;
   }
 
   .site-intro .link-buttons {
-    width: 100%;
+    max-width: 15em;
     font-size: 0.8em;
   }
 
@@ -271,6 +274,7 @@
   /* recycle section */
 
   .home-recycle {
+    display: none;
     flex-direction: column-reverse;
   }
 
