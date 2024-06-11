@@ -38,7 +38,6 @@ body {
   margin: 0;
   width: 100%;
   background-color: var(--light-grey);
-  padding: 0 1em;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -114,7 +113,6 @@ button {
   height: 5em;
   box-sizing: border-box;
   padding: 0 2em;
-  margin-bottom: 1em;
 }
 
 .navbar section {
@@ -560,7 +558,7 @@ button {
 
 .site-intro {
   width: 100%;
-  padding: 13em 10em;
+  padding: 12em 6em;
   box-sizing: border-box;
   position: relative;
   background-image: url("/public/images/home-page/home-site-intro.jpg");
@@ -579,7 +577,7 @@ button {
 }
 
 .site-intro h1 {
-  font-size: 5em;
+  font-size: 4em;
   margin: 0.5em 0;
 }
 .site-intro p {
